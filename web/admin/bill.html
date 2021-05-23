@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type= "text/javascript" src="./js/bill.js" defer></script>
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="../index.html"><img src="./images/logo_d1h3.png" width="100px" height="100px"></a>
+                </div>
+                <div class="menu">
+                    <div class="menutop"><a href="#">Đơn hàng</a></div>
+                    <div class="menutop"><a href="customer.html">Khách hàng</a></div>
+                    <div class="menutop"><a href="admin.html">Sản phẩm</a></div>
+                    <div class="menutop"><a href="../index.html">Trang chủ</a></div>
+                </div>          
+            </div>
+        </div>
+        <div id="baosearch">
+            <i class="fa fa-search" onclick="MoSearchAdmin();"></i>
+            <input id ="khungsearchadmin" type="text" value="" placeholder="Tìm kiếm..." onkeyup ="searching();"></input>
+            <select id="chonsearch" onchange="searching();">
+                <option value="all">Tất cả</option>
+                <option value="idbill">ID-Bill</option>
+                <option value="iduser">ID-User</option>
+                <option value="ngaydat">Ngày đặt</option>
+                <option value="tongtien">Tổng tiền</option>
+                <option value="tinhtrang">Tình trạng</option>
+            </select>           
+        </div>       
+        <div id="sanpham">
+            <div class="chitiet">
+                <div id="formchitiet">
+                    <div id="chitietthongtinbill">
+                        <div class="thongtinchitiethoadon"><b>THÔNG TIN CHI TIẾT HÓA ĐƠN</b>
+                            <div id="X" onclick="document.getElementById('formchitiet').style.display='none';document.getElementById('bgden').style.display='none'">X</div>
+                        </div>
+                        <hr style="background-color: red; height: 3px">
+                        <div class="thongtinkhachhang">
+                            <div><b>Thông tin khách hàng:</b>
+                                <hr style="background-color: black; width: 43%; height: 3px">
+                            </div>
+                            <div class="info">Tên tài khoản: </div>
+                            <div class="output" id="user"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Họ tên: </div>
+                            <div class="output" id="hoten"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Email: </div>
+                            <div class="output" id="email"></div>
+                            <div style="clear: both"></div>
+                                <hr style="background-color: black; width: 100%; height: 3px">
+                        </div>
+                        <div class="thongtinnhanhang">
+                            <div><b>Thông tin nhận hàng:</b>
+                                <hr style="background-color: black; width: 40%; height: 3px">
+                            </div>
+                            <div class="info">Họ tên người nhận: </div>
+                            <div class="output" id="hotennguoinhan"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Địa chỉ nhận: </div>
+                            <div class="output" id="diachinhan"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Số điện thoại: </div>
+                            <div class="output" id="sodienthoainhan"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Ghi chú: </div>
+                            <div class="output" id="ghichu"></div>
+                            <div style="clear: both"></div>
+                                <hr style="background-color: black; width: 100%; height: 3px">
+                        </div>
+                        <div class="thongtinhoadon">
+                            <div><b>Thông tin đơn hàng:</b>
+                                <hr style="background-color: black; width: 38%; height: 3px">
+                            </div>
+                            <div class="info">Cửa hàng xe: </div>
+                            <div class="output" id="cuahang"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Thanh toán: </div>
+                            <div class="output" id="hinhthuc"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Ngày mua hàng: </div>
+                            <div class="output" id="ngaydat"></div>
+                            <div style="clear: both"></div>
+                            <div class="info">Chi tiết: </div>
+                            <div class="output" id="info"></div>
+                                <hr style="float: right; background-color: black; width: 65%; height: 3px">
+                        </div>
+                        <div class="tongtienbill"><b>Tổng tiền: </b></div>
+                        <div class="tong" id="totalprice"></div>
+                        <div style="clear: both"></div>
+                        <div class="tinhtrangbill"><b>Tình trạng hóa đơn: </b></div>
+                        <div class="class">
+                            <select id="tinhtrang">
+                                <option style="color: red">Chưa xử lý</option>
+                                <option style="color: green">Đã xử lý</option>  
+                            </select>
+                        </div>
+                        <button onclick="changeTinhtrang();" style="margin-left: 35%; width: 30%; margin-top: 5px; height: 30px; border-radius: 50px; margin-bottom: 5px">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+            <div id="bgden" onclick="TatForm();"></div>
+            <div class="thongtinsanpham"><b>THÔNG TIN ĐƠN HÀNG</b></div>
+            <div id="thongtinsp">
+                <div class="thongtiniddh">ID Đơn hàng</div>
+                <div class="thongtinidcus">ID Khách hàng</div>
+                <div class="thongtinngaydat">Ngày đặt hàng</div>
+                <div class="thongtintongtien">Tổng tiền</div>
+                <div class="thongtintinhtrangbill">Tình trạng</div>
+                <div class="thongtinchitietbill">Chi tiết</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinsp">
+                <div id="idbill"></div>
+                <div id="idkhachhang"></div>
+                <div id="ngaydathang"></div>
+                <div id="tongtien"></div>
+                <div id="tinhtrangbill"></div>
+                <div id="chitietbill"></div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div id="bgden" onclick="TatForm();"></div>
+        <div id="chua">
+            <div id="phantrang"></div>
+        </div>
+    <!-------footer------>
+        <div class="footer">
+            <div class="container">
+                <div id="row">                
+                    <div class="footer_col_1">
+                        <h3>Download Our App</h3>
+                        <div class="app-logo">
+                           <a href="#"><img src="./images/app-store.png"></a>
+                           <a href="#"><img src="./images/play-store.png"></a> 
+                        </div>
+                    </div>
+                    <div class="footer_col_2">
+                        <img src="./images/logo_d1h3_white.png" class="logochinh" style="margin-left: 25%;">
+                        <h3>Cần cù bù thông minh!</h3>
+                    </div>
+                    <div class="footer_col_3">
+                        <h3>Thành viên</h3>
+                        <ul>
+                            <li>C.Hiền</li>
+                            <li>T.Hiếu</li>
+                            <li>K.Hiếu</li>
+                            <li>H.Đức</li>
+                        </ul>
+                    </div>
+                    <div class="footer_col_4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>         
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <address style="text-align: center; font-weight: bold;">273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh</address>
+                <p class="copy-right"><i class="fa fa-copyright" ></i>Copy right - D1H3</p>
+                <p id="time" style="text-align: center;"></p>
+            </div>
+        </div>
+</body>
+</html>

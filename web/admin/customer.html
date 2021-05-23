@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type= "text/javascript" src="./js/customer.js"></script>
+
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo_d1h3.png" width="100px" height="100px"></a>
+                </div>
+                <div class="menu">
+                    <div class="menutop"><a href="bill.html">Đơn hàng</a></div>
+                    <div class="menutop"><a href="#">Khách hàng</a></div>
+                    <div class="menutop"><a href="admin.html">Sản phẩm</a></div>
+                    <div class="menutop"><a href="../index.html">Trang chủ</a></div>
+                </div>              
+            </div>       
+        </div>
+        <div id="baosearch">
+            <i class="fa fa-search" onclick="MoSearchAdmin();"></i>
+            <input id ="khungsearchadmin" type="text" value="" placeholder="Tìm kiếm..." onkeyup ="searching();"></input>
+            <select id="chonsearch" onchange="searching();">
+                <option value="all">Tất cả</option>
+                <option value="id">ID</option>
+                <option value="tendn">Tên đăng nhập</option>
+                <option value="email">Email</option>
+                <option value="quyen">Quyền</option>
+                <option value="hoten">Họ tên</option>
+            </select>   
+        </div>
+        <div id="sanpham">
+            <div class="sua">
+                <div id="formsua">
+                    <div id="suasanpham" style="margin-left: 10%; height: 90%">
+                        <div class="chinhsua"><b>CHỈNH SỬA QUYỀN KHÁCH HÀNG</b>
+                            <div id="X" onclick="TatForm();">X</div>
+                        </div>
+                        <div class="dulieuinput">Họ tên: </div>
+                        <input type="text" name="name" placeholder="Họ tên khách hàng" id="hoten">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Username: </div>
+                        <input type="text" name="brand" placeholder="Username khách hàng" id="usr">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Email: </div>
+                        <input type="email" name="price" placeholder="Email khách hàng" id="email">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Ngày sinh: </div>
+                        <input type="date" name="img" id="ns">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Quyền khách hàng: </div>
+                        <select style="border-radius: 10px" id="quyen">
+                            <option>admin</option>
+                            <option>khach</option>
+                        </select>
+                        <div style="clear: both"></div>
+                        <button onclick="saveUser()" style="width: 30%; margin-top: 5px; height: 30px; border-radius: 50px; background-color: black; color: red"><b onclick="TatForm();" style="cursor: pointer;">Thay đổi thông tin</b></button>
+                    </div>
+                </div>
+            </div> 
+            <div class="thongtinsanpham"><b>THÔNG TIN KHÁCH HÀNG</b></div>
+            <div id="thongtinkh">
+                <div class="thongtinidkh">ID</div>
+                <div class="thongtinhotenkh">Họ tên</div>
+                <div class="thongtinuserkh">Tên đăng nhập</div>
+                <div class="thongtinemailkh">Email</div>
+                <div class="thongtinquyenkh">Quyền</div>
+                <div class="thongtinchucnangkh">Chức năng</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinkh">
+                <div id="idkh"></div>
+                <div id="hotenkh"></div>
+                <div id="userkh"></div>
+                <div id="emailkh"></div>
+                <div id="tinhtrangkh"></div>
+                <div id="chucnangkh"></div>
+                <div style="clear: both"></div>
+            </div>  
+        </div>
+        <div id="bgden"></div>
+        <div id="chua">
+            <div id="phantrangkh"></div>
+        </div>
+    <!-------footer------>
+        <div class="footer">
+            <div class="container">
+                <div id="row">                
+                    <div class="footer_col_1">
+                        <h3>Download Our App</h3>
+                        <div class="app-logo">
+                           <a href="#"><img src="./images/app-store.png"></a>
+                           <a href="#"><img src="./images/play-store.png"></a> 
+                        </div>
+                    </div>
+                    <div class="footer_col_2">
+                        <img src="./images/logo_d1h3_white.png" class="logochinh" style="margin-left: 25%;">
+                        <h3>Cần cù bù thông minh!</h3>
+                    </div>
+                    <div class="footer_col_3">
+                        <h3>Thành viên</h3>
+                        <ul>
+                            <li>C.Hiền</li>
+                            <li>T.Hiếu</li>
+                            <li>K.Hiếu</li>
+                            <li>H.Đức</li>
+                        </ul>
+                    </div>
+                    <div class="footer_col_4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>         
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <address style="text-align: center; font-weight: bold;">273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh</address>
+                <p class="copy-right"><i class="fa fa-copyright" ></i>Copy right - D1H3</p>
+                <p id="time" style="text-align: center;"></p>
+            </div>
+        </div>
+</body>
+</html>

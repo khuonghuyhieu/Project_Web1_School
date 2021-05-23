@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>H3D1 Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/styte.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type= "text/javascript" src="./js/myscript.js" defer></script>
+
+</head>
+<body >
+    <!---------Search--------->
+    <div id="khungsearch">
+        <input type="text" value="" id="ThanhSearch" placeholder="Bạn cần tìm gì?" onkeyup="search();">
+        <div id="TatSearch" onclick="TatSearch();">X</div>
+        <button onclick="searchnangcao();" id="searchnangcao">Search nâng cao</button>
+        <div id="baosearchnangcao">
+            <select id="loaixe" onchange="search();">
+                <option value="all" selected>Tất cả</option>
+                <option value="XeSo">Xe Số</option>
+                <option value="XeTayGa">Xe Tay Ga</option>
+                <option value="XeCon">Xe Côn Tay</option>
+                <option value="XeMoTo">Xe Mô Tô</option> 
+            </select>                 
+        <input type="text" id="priceform" onckeyup="search();" value="" placeholder="Giá từ"><i id="ngancachsearh"class="fa fa-long-arrow-right"></i><input type="text" id="priceto" onkeyup="search();" value="" placeholder="Đến"> 
+        </div>
+        <div id="searchresult">
+
+        </div>
+    </div>
+    <!-------------------------------->
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo_d1h3.png" width="100px" height="100px"></a>
+                </div>
+                <nav>
+                    <ul id="menu">
+                        <li ><i class="fa fa-search" onclick="MoSearch();"></i>
+                        </li>
+                        <li><span onClick="window.location.href='index.html'">Trang chủ</span></li>
+                        <li><span>Tin tức</span></li>
+                        <li><span onclick="MoTuyenDung();">Tuyển dụng</span></li>
+                        <li id="test1"><img src="./images/login/account.png" class="dngh" id="hinhdangnhap" onclick="dnhap();">
+                        </li>
+                    </ul>
+                   <a href="giohang.html"><img src="./images/shoping-cart.png" class="dngh" id="giohang" ></a>
+                </nav>              
+            </div>  
+<!---------login--------->
+    
+   <div id="he-ro" class="hero">
+        <div id="form" >
+            <div id="X" onclick="TatForm();">X</div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login1()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register1()">Register</button>
+            </div>
+            
+            <div id="khunglogin">
+                <form id="login" class="input-group">
+                    <div id="sign-in"><h2>Đăng nhập</h2>
+                    </div>
+                    <input id="user" type="text" class="input-field" value="" placeholder="Tên đăng nhập" value="" >
+                    <div id="erroruser" class="error">Bạn chưa nhập tên đăng nhập</div>
+                    <input id="pass" type="password" class="input-field" value="" placeholder="Mật Khẩu" >
+                     <div id="errorpass" class="error">Bạn chưa nhập mật khẩu</div>
+                    <button type="submit" class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+
+            <div id="signup">
+                <form id="register" class="input-group">
+                    <div id="sign-in"><h2>Đăng ký</h2>
+                    </div>
+                    <input type="text" class="input-field" placeholder="Tên đăng nhập" id="usr" value="">
+                    <div id="errorusr" class="error">Bạn chưa nhập tên đăng nhập</div>
+                    <input type="password" class="input-field" placeholder="Mật Khẩu" id="mk" value="">
+                    <div id="errormk" class="error">Bạn chưa nhập mật khẩu</div>
+                    <input type="password" class="input-field" placeholder="Nhập lại mật khẩu" id="mk1" value="" >
+                    <div id="errormk1" class="error">Mật khẩu không trùng khớp</div>
+                    <input type="text" class="input-field" placeholder="Họ và Tên" id="hoten" value="">
+                    <div id="errorhoten" class="error">Bạn chưa nhập họ tên</div>
+                    <input type="text" class="input-field" id="email" placeholder="Email" value="">
+                    <div id="erroremail" class="error">Bạn chưa nhập email</div>
+                    <div id="gioitinh">Giới Tính: 
+                    <input type="radio" name="ck1" value="Nam" checked="checked" id="nam">Nam
+                    <input type="radio" name="ck1" value="Nu" id="nu">Nữ
+
+                    </div>
+                    <div id="ngaysinh">Ngày Sinh: 
+                        <input type="date" name="ngsinh" value="ngaysinh" id="ns">
+                        <div id="errorngsinh" class="error">Bạn chưa chọn ngày sinh</div>
+                    </div>
+                    <div>
+                    <button type="submit" class="submit-btn" >OK</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-----Slide show------>
+    <div class="dauphai" onclick="changeImg();"> <img src="images/dau3.png"></div>
+    <div class="dautrai" onclick="changeImg1();"> <img src="images/dau4.png"></div>
+    <div class="slide-show" ><img src="images/xe/slide1.jpg" id="img" >
+    </div>
+    
+    <!-----Products------>
+    <div id="chiasanpham">
+       <button  class="sp-btn active" onclick="window.location.href='index.html'">TẤT CẢ</button>
+        <button  class="sp-btn"  onclick="showXeso();">XE SỐ</button>
+        <button  class="sp-btn"  onclick="showXeTayGa();">XE TAY GA</button> 
+        <button  class="sp-btn"  onclick="showXeTayCon();">XE TAY CÔN</button> 
+        <button  class="sp-btn"  onclick="showXeMoTo();">XE MÔ TÔ</button>
+         
+    </div>    
+
+       
+        <div id="row"> </div>
+        <div id="product-info">
+            <div id="info-detail"></div>
+        </div>
+        
+      
+
+
+
+
+    <div id="sotrang">
+        <div id="phantrang">
+            <script type="text/javascript"></script>
+        </div>
+   </div>
+    
+   <div id="bgden" onclick="TatForm();"></div>
+   <div id="tuyendung" > <p>Hiện không có chương trình tuyển dụng.</p>
+    <div id="TatSearch" onclick="TatTuyenDung();">X</div> </div>
+   
+  
+    <!-------footer------>
+    <div class="footer">
+        <div class="container">
+            <div id="row">                
+                <div class="footer_col_1">
+                    <h3>Download Our App</h3>
+                    <div class="app-logo">
+                       <a href="#"><img src="./images/app-store.png"></a>
+                       <a href="#"><img src="./images/play-store.png"></a> 
+                    </div>
+                </div>
+                <div class="footer_col_2">
+                    <img src="./images/logo_d1h3_white.png" class="logochinh" style="margin-left: 25%;">
+                    <h3>Cần cù bù thông minh!</h3>
+                </div>
+                <div class="footer_col_3">
+                    <h3>Thành viên</h3>
+                    <ul>
+                        <li>C.Hiền</li>
+                        <li>T.Hiếu</li>
+                        <li>H.Hiếu</li>
+                        <li>H.Đức</li>
+                    </ul>
+                </div>
+                <div class="footer_col_4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>         
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <address style="text-align: center; font-weight: bold;">273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh</address>
+            <p class="copy-right"><i class="fa fa-copyright" ></i>Copy right - D1H3</p>
+            <p id="time" style="text-align: center;"></p>
+        </div>
+    </div>
+
+
+</body>
+</html>

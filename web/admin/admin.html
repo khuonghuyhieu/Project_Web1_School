@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type= "text/javascript" src="./js/admin.js" defer></script>
+
+</head>
+<body>
+        <div class="container">
+            <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="../index.html"><img src="./images/logo_d1h3.png" width="100px" height="100px"></a>
+                </div>
+                <div class="menu">
+                    <div class="menutop"><a href="bill.html">Đơn hàng</a></div>
+                    <div class="menutop"><a href="customer.html">Khách hàng</a></div>
+                    <div class="menutop"><a href="#">Sản phẩm</a></div>
+                    <div class="menutop"><a href="../index.html">Trang chủ</a></div>
+                </div>          
+            </div>       
+        </div>
+        <div id="btnthemsp">
+            <img src="../images/daucong.png" class="btnthem" onclick="MoThemSp();">
+        </div>
+        <div id="baosearch">
+            <i class="fa fa-search" onclick="MoSearchAdmin();"></i>
+            <input id ="khungsearchadmin" type="text" value="" placeholder="Tìm kiếm..." onkeyup ="searching();"></input>
+            <select id="chonsearch" onchange="searching();">
+                <option value="all">Tất cả</option>
+                <option value="id">ID</option>
+                <option value="ten">Tên</option>
+                <option value="loai">Loại</option>
+                <option value="gia">Giá</option>
+            </select>
+        </div>
+        <div id="sanpham">
+            <div class="sua">
+                <div id="formsua">
+                    <div id="suasanpham" style="margin-left: 10%; height: 90%">
+                        <div class="chinhsua"><b>CHỈNH SỬA SẢN PHẨM</b>
+                            <div id="X" onclick="TatForm();">X</div>
+                        </div>
+                        <div class="dulieuinput">Tên sản phẩm: </div>
+                        <input type="text" name="name" placeholder="Nhập tên sản phẩm" id="name">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Thương hiệu: </div>
+                        <input type="text" name="brand" placeholder="Nhập tên thương hiệu sản phẩm" id="brand">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Giá sản phẩm: </div>
+                        <input type="text" name="price" placeholder="Nhập giá sản phẩm" id="price">
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Loại sản phẩm: </div>
+                        <select style="border-radius: 10px" id="loai1" >
+                            <option value="xe số">Xe số</option>
+                            <option value="tay ga">Tay ga</option>
+                            <option value="tay côn">Tay côn </option>
+                            <option value="mô-tô">Mô tô</option>
+                        </select>
+                        <div style="clear: both"></div>
+                        <div class="dulieuinput">Hình ảnh sản phẩm: </div>
+                        <input type="file" name="img" id="img">
+                        <div style="clear: both"></div>
+                        <button onclick="saveProduct();document.getElementById('formsua').style.display='none'" style="width: 30%; margin-top: 5px; height: 30px; border-radius: 50px; background-color: black; color: red;"><b onclick="TatForm();" style="cursor: pointer;">Thay đổi sản phẩm</b></button>
+                    </div>
+                </div>
+            </div> 
+            <div id="thongtinsp">
+                <div class="thongtinsanpham"><b>THÔNG TIN SẢN PHẨM</b></div>
+                <div class="thongtinidsp">ID</div>
+                <div class="thongtinanhsp">Ảnh</div>
+                <div class="thongtintensp">Tên sản phẩm</div>
+                <div class="thongtinloaisp">Loại</div>
+                <div class="thongtingiasp">Giá</div>
+                <div class="thongtinchucnangsp">Chức năng</div>
+                <div style="clear: both"></div>
+            </div>
+            <div id="thongtinsp">
+                <div id="idsp"></div>
+                <div id="imgsp"></div>
+                <div id="tensp"></div>
+                <div id="loaisp"></div>
+                <div id="giasp"></div>
+                <div id="chucnangsp">    
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+        <div id="bgden" onclick="TatForm();"></div>
+        <div id="chua">
+            <div id="phantrang"></div>
+        </div>
+        <div style="height: 300px; width: 100%" id="formthem">
+            <div id="themsanpham" style="margin-left: 25%">
+                <form id="formthemsp">
+                <div class="themmoisanpham"><b>THÊM SẢN PHẨM</b></div>
+                <div id="X1" onclick="TatForm();">X</div>
+                <div class="dulieuinput">Tên sản phẩm: </div>
+                <input type="text" name="name" placeholder="Nhập tên sản phẩm" id="name1" value="">
+                <div id="errortensp" class="error1">Bạn chưa nhập tên sản phẩm</div>
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Thương hiệu: </div>
+                <input type="text" name="brand1" placeholder="Nhập tên thương hiệu sản phẩm" id="brand1" value="">
+                <div id="errorhieusp" class="error1">Bạn chưa nhhập tên thương hiệu</div>
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Giá sản phẩm: </div>
+                <input type="text" name="price1" placeholder="Nhập giá sản phẩm" id="price1" value="">
+                <div id="errorgiasp" class="error1">Bạn chưa nhập giá sản phẩm</div>
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Loại sản phẩm: </div>
+                <select style="border-radius: 10px" id="loai">
+                    <option value="xe số">Xe số</option>
+                    <option value="tay ga">Tay ga</option>
+                    <option value="tay côn">Tay côn </option>
+                    <option value="mô-tô">Mô tô</option>
+                </select>
+                <div style="clear: both"></div>
+                <div class="dulieuinput">Hình ảnh: </div>
+                <input type="file" name="img" id="img1" value="">
+                <div id="errorhinhsp" class="error1">Bạn chưa chọn hình</div>
+                <div style="clear: both"></div>
+                <button onclick="addProduct();" style="width: 30%; margin-top: 5px; margin-left: 35%; height: 30px;border-radius: 50px; background-color: black; color: red; font-weight: bold;">Thêm mới sản phẩm</button>
+                </form>
+            </div>
+        </div>
+    <!-------footer------>
+        <div class="footer">
+            <div class="container">
+                <div id="row">                
+                    <div class="footer_col_1">
+                        <h3>Download Our App</h3>
+                        <div class="app-logo">
+                           <a href="#"><img src="./images/app-store.png"></a>
+                           <a href="#"><img src="./images/play-store.png"></a> 
+                        </div>
+                    </div>
+                    <div class="footer_col_2">
+                        <img src="./images/logo_d1h3_white.png" class="logochinh" style="margin-left: 25%;">
+                        <h3>Cần cù bù thông minh!</h3>
+                    </div>
+                    <div class="footer_col_3">
+                        <h3>Thành viên</h3>
+                        <ul>
+                            <li>C.Hiền</li>
+                            <li>T.Hiếu</li>
+                            <li>K.Hiếu</li>
+                            <li>H.Đức</li>
+                        </ul>
+                    </div>
+                    <div class="footer_col_4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>         
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <address style="text-align: center; font-weight: bold;">273 An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh</address>
+                <p class="copy-right"><i class="fa fa-copyright" ></i>Copy right - D1H3</p>
+                <p id="time" style="text-align: center;"></p>
+            </div>
+        </div>
+</body>
+</html>

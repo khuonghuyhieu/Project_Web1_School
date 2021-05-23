@@ -1,0 +1,1784 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.navbar{
+	display: flex;
+	align-items: center;
+}
+/*nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}	
+nav ul li{
+	display: inline-block;
+	padding-right: 60px;
+	position: relative;
+}
+.navbar .menu li a{
+	color: #555;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 30px;
+	display: block;
+}
+.navbar .menu li a:hover{
+	color: cyan;
+}
+*/
+.navbar .menu{
+	width: 1183px; 
+	height: 50px;
+}
+.navbar .menu .menutop a{
+	float: right;
+	width: 15%; 
+	height: 50px; 
+	font-size: 20px; 
+	line-height: 50px; 
+	text-align: right;
+	text-decoration: none;
+	color: #555555;
+}
+.navbar .menu .menutop a:hover{
+	text-decoration: none;
+	color: cyan;
+}
+.header .container{
+	width: 100%;
+	margin-bottom: 2px;
+	padding-bottom: 5px;
+}
+/*----------------------------------*/
+#row{
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/*------------------So trang----------------*/
+#bgden{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	top:0;
+	left: 0;
+	display: none;
+	z-index: 5;
+}
+
+/*-----footer------*/
+.footer{
+	background: #000;
+	color: #8a8a8a;
+	font-size: 14px;
+	padding: 20px 0;
+}
+.logochinh{
+	width: 100px;
+	height: 100px;
+}
+.footer p{
+	color: #8a8a8a;
+}
+.footer	h3{
+	color: white;
+}
+.app-logo img{
+	width: 140px;
+}
+.footer_col_3 , .footer_col_4{
+	flex-basis: 12%;
+	text-align: center;
+}
+ul{
+	list-style-type: none;
+}
+
+.footer hr{
+	border: none;
+	margin: 20px 0;
+	height: 1px;
+	background: #b5b5b5;
+
+}
+.copy-right{
+	text-align: center;
+}
+
+.menu-icon{
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
+}
+/*----------thongtinsanpham----------*/
+#sanpham{
+	margin-left: 70px;
+	height: 880px;
+}
+.thongtinsp,.thongtinkh{
+	margin-left: 70px;
+}
+.thongtin{
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtinsanpham{
+	width: 1213px; 
+	height: 50px; 
+	font-size: 30px; 
+	text-align: center
+}
+.thongtinidsp,.thongtinloaisp,.thongtinchucnangsp{
+	width: 121px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtinanhsp,.thongtingiasp{
+	width: 243px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtintensp{
+	width: 364px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+#idsp{
+	width: 121px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#imgsp{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#tensp{
+	width: 364px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+}
+#loaisp{
+	width: 121px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+}
+#giasp{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+}
+#chucnangsp,#chucnangkh{
+	width: 121px
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+}
+.col_4{
+	min-width: 30px;
+	height: 100px;
+	width: 243px;
+	border: solid 1px black;
+}
+.col_4 img{
+	width: 240px;
+	height: 98px;
+}
+h1{
+	width: 121px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+	text-align: center;
+	border: solid 1px black; 
+}
+h2{
+	width: 364px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+	text-align: center;
+	border: solid 1px black; 
+}
+h5{
+	width: 243px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+	text-align: center;
+	border: solid 1px black;
+}
+/*---------phantrang-----------*/
+#chua{
+	margin-left: 70px;
+}
+#phantrang{
+	width: 1213px;
+	height: 30px;
+	text-align: center;
+	display: inline-table;
+}
+#phantrang div{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px
+	border: solid 1px black;
+	border-radius: 50%;
+	color: black;
+	display: inline-table;
+	cursor: pointer;
+}
+#phantrang div:hover{
+	background-color: black;
+	color: red;
+}
+#phantrangkh{
+	width: 1213px;
+	height: 30px;
+	text-align: center;
+	display: inline-table;
+}
+#phantrangkh div{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px
+	border: solid 1px black;
+	border-radius: 50%;
+	color: black;
+	display: inline-table;
+	cursor: pointer;
+}
+#phantrangkh div:hover{
+	background-color: black;
+	color: red;
+}
+/*------------Themsanpham-------------*/
+.themmoisanpham{
+	margin-top: 20px;
+	width: 100%; 
+	height: 50px; 
+	font-size: 30px; 
+	text-align: center;
+}
+/*--------nutchinhsua-----------*/
+.chinhsua{
+	width: 100%;
+	height: 50px; 
+	margin-top: 20px; 
+	font-size: 30px; 
+	text-align: center; 
+	position: relative;
+}
+/*-----------------------------*/
+#themsanpham{
+	margin-left: 5%;
+	margin-bottom: 15px;
+	width: 45%;
+	float: left;
+	box-shadow: 5px 5px 5px black;
+	height: 280px;
+}
+.dulieuinput{
+	margin-top: 5px;
+	margin-left: 5%;
+	float: left;
+	width: 25%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	text-align: right;
+}
+input{
+	margin-top: 5px;
+	float: right;
+	margin-right: 5%;
+	width: 65%;
+	height: 30px;
+	border-right: 0px;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: solid 1px lightgray;
+	outline: none;
+}
+select,option{
+	margin-top: 5px;
+	float: left;
+	width: 20%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 15px;
+}
+input[type=file]{
+	margin-top: 5px;
+	float: left;
+	width: 65%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 15px;
+	border-bottom: 0px;
+}
+/*------Timsanpham------*/
+#timsanpham{
+	float: left;
+	height: 180px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 40%;
+	box-shadow: 5px 5px 5px black; 
+}
+input[type=search]{
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+	height: 30px;
+}
+/*-----Chucnang--------*/
+.chucnang{
+	width: 121px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+	text-align: center;
+	border: solid 1px black;
+}
+button{
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: black;
+	color: red;
+}
+/*------thongtinkhachhang--------*/
+.thongtinidkh,.thongtinchucnangkh,.thongtinquyenkh{
+	width: 121px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtinhotenkh,.thongtinuserkh{
+	width: 243px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtinemailkh{
+	width: 364px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+#hotenkh{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#userkh{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#emailkh{
+	width: 364px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#idkh{
+	width: 121px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#tinhtrangkh{
+	width: 121px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+
+/*--------Suasanpham---------*/
+.error1{
+	color: red;
+	font-size: 12px;
+	text-align: center;
+	display: none;
+}
+.sua{
+	margin-left: 120px !important;
+	width: 72%;
+	position: absolute;
+	top: 200px;
+	z-index: 7;
+	position: fixed;
+}
+#formthem{
+	width: 80%;
+	height: 300px;
+	position: absolute;
+	top: 100px;
+	z-index: 7;
+	position: fixed;
+	display: none;
+}
+#themsanpham{
+	background-color: #fff;
+	height: 355px;
+}
+.btnthem{
+	width: 30px;
+	height: 30px;
+}
+#btnthemsp{
+	position: absolute;
+	margin-left: 70px;
+	left: 1183px;
+	top: 120px;
+	cursor: pointer;
+}
+#btnthemsp img:hover{
+	transform: scale(1.1);
+}
+.sua #formsua{
+	width: 100%;
+	height: 350px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+	display: none;
+
+}
+#suasanpham {
+	margin-left: 5%;
+	margin-bottom: 15px;
+	width: 80%;
+	float: left;
+	box-shadow: 5px 5px 5px black;
+	height: 280px;
+	background-color: #fff;
+}
+#X{
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	width: 25px;
+	height: 25px;
+	font-size: 20px;
+	line-height: 25px;
+	color: red;
+	background-color: black;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#X1{
+	position: absolute;
+	top: 0;
+	right: 30%;
+	float:right;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	font-size: 20px;
+	line-height: 25px;
+}
+#X:hover, #X1:hover{
+	color: blue;
+}
+/*-------thongtindonhang--------*/
+.thongtiniddh,.thongtinidcus,.thongtintinhtrangbill,.thongtinchitietbill{
+	width: 182px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+.thongtinngaydat,.thongtintongtien{
+	width: 243px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	line-height: 30px;
+	color: white;
+	border: solid 1px black;
+	background-color: red;
+}
+#idbill{
+	width: 182px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#idkhachhang{
+	width: 182px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#ngaydathang{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#tongtien{
+	width: 243px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#tinhtrangbill{
+	width: 182px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+#chitietbill{
+	width: 182px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	font-size: 30px;
+	line-height: 50px;
+}
+h6{
+	width: 182px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+	text-align: center;
+	border: solid 1px black;
+}
+/*--------ChiTietHoaDon---------*/
+.thongtinchitiethoadon{
+	margin-top: 5px; 
+	width: 100%; 
+	height: 50px; 
+	text-align: center; 
+	font-size: 25px; 
+	line-height: 50px; 
+	color: red; 
+	position: relative;
+}
+.chitiet{
+	position: absolute;
+	top: 100px;
+	left: 30%;
+	width: 40%;
+	height: 400px;
+	z-index: 7;
+}
+.chitiet #formchitiet{
+	width: 100%;
+	display: none;
+
+}
+#chitietthongtinbill{
+	z-index: 7;
+	margin: 5%;
+	width: 90%;
+	float: left;
+	box-shadow: 5px 5px 5px black;
+	background-color: #fff;
+}
+.thongtinkhachhang{
+	width: 100%;
+}
+.thongtinnhanhang{
+	width: 100%;
+}
+.thongtinhoadon{
+	width: 100%;
+}
+.info{
+	float: left;
+	width: 35%;
+	text-align: right;
+}
+.output{
+	float: right;
+	width: 65%;
+	text-align: center;
+}
+.chucnangbill{
+	width: 182px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 95px;
+	text-align: center;
+	border: solid 1px black;
+}
+.tongtienbill,.tinhtrangbill{
+	float: left; 
+	width: 40%; 
+	height: 4.5%; 
+	margin-top: 3px;
+}
+.tong{
+	float: right; 
+	width: 60%; 
+	text-align: center; 
+	height: 4.5%;
+}
+.class{
+	float: right; 
+	width: 60%; 
+	text-align: right;
+}
+.class select{
+	width: 50%; 
+	height: 50%; 
+	margin-bottom: 5px;
+}
+#khungsearchadmin{
+	width: 100%;
+	width: 300px;
+	background-color: #fff;
+	color: black;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	font-size: 20px;
+	display: none;
+}
+#baosearch{
+	position: absolute;
+	left: 130px;
+}
+i.fa.fa-search{
+	cursor: pointer;
+}
+#chonsearch{
+	width: 60px;
+	position: absolute;
+	left: -63px;
+	display: none;
+}
+@media screen and (max-width: 1300px){
+	#chua{
+		margin-left: 50px;
+	}
+	#sanpham{
+		margin-left: 50px;
+		height: 712px;
+	}
+	#phantrang,#phantrangkh{
+		width: 1053px;
+	}
+	#phantrang div,#phantrangkh div{
+		width: 484px;
+		font-size: 18px;
+		width: 23px;
+		height: 23px;
+	}
+	.thongtinsanpham{
+		width: 1053px; 
+		height: 50px; 
+		font-size: 30px; 
+		text-align: center
+	}
+	.thongtinidsp,.thongtinloaisp,.thongtinchucnangsp,.thongtinidkh,.thongtinchucnangkh,.thongtinquyenkh{
+		width: 101px;
+		float: left;
+		text-align: center;
+		font-size: 15px;
+		line-height: 30px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtinanhsp,.thongtingiasp,.thongtinhotenkh,.thongtinuserkh,.thongtinngaydat,.thongtintongtien{
+		width: 203px;
+		float: left;
+		text-align: center;
+		font-size: 15px;
+		line-height: 30px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtintensp,.thongtinemailkh{
+		width: 344px;
+		float: left;
+		text-align: center;
+		font-size: 15px;
+		line-height: 30px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtiniddh,.thongtinidcus,.thongtintinhtrangbill,.thongtinchitietbill{
+		width: 161.75px;
+		float: left;
+		text-align: center;
+		font-size: 15px;
+		line-height: 30px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	#idsp,#loaisp,#idkh,#tinhtrangkh{
+		width: 101px;
+		height: 80px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	#imgsp,#giasp,#hotenkh,#userkh,#ngaydathang,#tongtien{
+		width: 203px;
+		height: 80px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	#tensp,#emailkh{
+		width: 344px;
+		height: 80px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#idbill,#idkhachhang,#tinhtrangbill,#chitietbill{
+		width: 161.75px;
+		height: 80px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	.col_4{
+		min-width: 30px;
+		height: 80px;
+		width: 203px;
+		border: solid 1px black;
+	}
+	.col_4 img{
+		width: 193px;
+		height: 78px;
+	}
+	h1{
+		width: 101px;
+		height: 80px;
+		font-size: 16px;
+		line-height: 80px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h2{
+		width: 344px;
+		height: 80px;
+		font-size: 16px;
+		line-height: 80px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h5{
+		width: 203px;
+		height: 80px;
+		font-size: 16px;
+		line-height: 80px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	h6{
+		width: 161.75px;
+		height: 80px;
+		font-size: 20px;
+		line-height: 80px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnang{
+		width: 101px;
+		height: 80px;
+		font-size: 20px;
+		line-height: 80px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnangbill{
+		width: 161.75px;
+		height: 80px;
+		font-size: 20px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	button{
+		margin: auto;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: black;
+		color: red;
+	}
+	.navbar .menu{
+		width: 1003px; 
+		height: 30px
+		background-color: black;
+	}
+	.navbar .menu .menutop a{
+		float: right; 
+		width: 15%; 
+		height: 50px; 
+		font-size: 18px; 
+		line-height: 50px; 
+		text-align: right;
+		text-decoration: none;
+		color: #555555;
+	}
+	.navbar .menu .menutop a:hover{
+		text-decoration: none;
+		color: cyan;
+	}
+	.btnthem{
+		width: 28px;
+		height: 28px;
+	}
+	#btnthemsp{
+		position: absolute;
+		margin-left: 50px;
+		left: 1025px;
+		top: 115px;
+		cursor: pointer;
+	}
+	.thongtinsanpham{
+		height: 40px;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	#baosearch{
+		display: none;
+	}
+}
+@media screen and (max-width: 1120px){
+	#chua{
+		margin-left: 40px;
+	}
+	#sanpham{
+		margin-left: 40px;
+		height: 522px;
+	}
+	#phantrang,#phantrangkh{
+		width: 813px;
+	}
+	#phantrang div,#phantrangkh div{
+		width: 484px;
+		font-size: 15px;
+		width: 20px;
+		height: 20px;
+	}
+	.thongtinsanpham{
+		width: 813px;
+		text-align: center;
+	}
+	.thongtinidsp,.thongtinloaisp,.thongtinchucnangsp,.thongtinidkh,.thongtinchucnangkh,.thongtinquyenkh{
+		width: 81px;
+		height: 20px;
+		float: left;
+		text-align: center;
+		font-size: 10px;
+		line-height: 20px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtinanhsp,.thongtingiasp,.thongtinhotenkh,.thongtinuserkh,.thongtinngaydat,.thongtintongtien{
+		width: 173px;
+		height: 20px;
+		float: left;
+		text-align: center;
+		font-size: 10px;
+		line-height: 20px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtintensp,.thongtinemailkh{
+		width: 224px;
+		height: 20px;
+		float: left;
+		text-align: center;
+		font-size: 10px;
+		line-height: 20px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtiniddh,.thongtinidcus,.thongtintinhtrangbill,.thongtinchitietbill{
+		width: 116.75px;
+		height: 20px;
+		float: left;
+		text-align: center;
+		font-size: 10px;
+		line-height: 20px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	#idsp,#loaisp,#idkh,#tinhtrangkh{
+		width: 81px;
+		height: 60px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	#imgsp,#giasp,#hotenkh,#userkh,#ngaydathang,#tongtien{
+		width: 173px;
+		height: 60px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	#tensp,#emailkh{
+		width: 224px;
+		height: 60px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#idbill,#idkhachhang,#tinhtrangbill,#chitietbill{
+		width: 116.75px;
+		height: 60px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	.col_4{
+		min-width: 30px;
+		height: 60px;
+		width: 173px;
+		border: solid 1px black;
+	}
+	.col_4 img{
+		width: 153px;
+		height: 58px;
+	}
+	h1{
+		width: 81px;
+		height: 60px;
+		font-size: 13px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h2{
+		width: 224px;
+		height: 60px;
+		font-size: 13px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h5{
+		width: 173px;
+		height: 60px;
+		font-size: 13px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	h6{
+		width: 116.75px;
+		height: 60px;
+		font-size: 13px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnang{
+		width: 81px;
+		height: 60px;
+		font-size: 5px;
+		line-height: 60px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnangbill{
+		width: 116.75px;
+		height: 60px;
+		font-size: 15px;
+		line-height: 45px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	button{
+		margin: auto;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: black;
+		color: red;
+	}
+	.dulieuinput{
+		margin-top: 5px;
+		margin-left: 5%;
+		float: left;
+		width: 25%;
+		height: 30px;
+		line-height: 30px;
+		font-size: 10px;
+		text-align: right;
+	}
+	.navbar .menu{
+		width: 752px; 
+		height: 30px
+		background-color: black;
+	}
+	.navbar .menu .menutop a{
+		float: right; 
+		width: 15%; 
+		height: 50px; 
+		font-size: 15px; 
+		line-height: 50px;
+		text-align: right;
+		text-decoration: none;
+		color: #555555;
+	}
+	.navbar .menu .menutop a:hover{
+		text-decoration: none;
+		color: cyan;
+	}
+	.btnthem{
+		width: 20px;
+		height: 20px;
+	}
+	#btnthemsp{
+		position: absolute;
+		margin-left: 40px;
+		top: 108px;
+		left: 793px;
+		cursor: pointer;
+	}
+	.thongtinchitiethoadon{
+		margin-top: 5px; 
+		width: 100%; 
+		height: 30px; 
+		text-align: center; 
+		font-size: 20px; 
+		line-height: 30px; 
+		color: red; 
+		position: relative;
+	}
+	.thongtinkhachhang,.thongtinnhanhang,.thongtinhoadon{
+		font-size: 12px;	
+	}
+	.info,.output,.tong{
+		font-size: 10px;
+	}
+	.tongtienbill,.tinhtrangbill{
+		font-size: 12px;
+	}
+	.footer{
+		background: #000;
+		color: #8a8a8a;
+		font-size: 14px;
+		padding: 20px 0;
+	}
+	.footer p{
+		color: #8a8a8a;
+	}
+	.footer	h3{
+		color: white;
+	}
+	.app-logo img{
+		width: 60px;
+	}
+	ul{
+		list-style-type: none;
+		font-size: 12px;
+	}
+	.menu-icon{
+		width: 60px;
+		height: 60px;
+	}
+
+	.footer_col_1 h3,.footer_col_2 h3,.footer_col_3 h3,.footer_col_4 h3{
+		font-size: 15px; 
+	}
+	.logochinh{
+		width: 60px;
+		height: 60px;
+	}
+	.thongtinsanpham{
+		height: 22px;
+		font-size: 20px;
+		line-height: 22px;
+	}
+	#baosearch{
+		display: none;
+	}
+}
+@media screen and (max-width: 870px){
+	#chua{
+		margin-left: 20px;
+	}
+	#sanpham{
+		margin-left: 20px;
+		height: 353px;
+	}
+	#phantrang,#phantrangkh{
+		width: 643px;
+	}
+	#phantrang div,#phantrangkh div{
+		width: 484px;
+		font-size: 8px;
+		width: 10px;
+		height: 10px;
+	}
+	.thongtinsanpham{
+		width: 643px; 
+		height: 50px; 
+		font-size: 30px; 
+		text-align: center
+	}
+	.thongtinidsp,.thongtinloaisp,.thongtinchucnangsp,.thongtinidkh,.thongtinchucnangkh,.thongtinquyenkh{
+		width: 51px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtinanhsp,.thongtingiasp,.thongtinhotenkh,.thongtinuserkh,.thongtinngaydat,.thongtintongtien{
+		width: 153px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtintensp,.thongtinemailkh{
+		width: 184px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtiniddh,.thongtinidcus,.thongtintinhtrangbill,.thongtinchitietbill{
+		width: 84.25px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	#idsp,#loaisp,#idkh,#tinhtrangkh{
+		width: 51px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	#imgsp,#giasp,#hotenkh,#userkh,#ngaydathang,#tongtien{
+		width: 153px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	#tensp,#emailkh{
+		width: 184px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#idbill,#idkhachhang,#tinhtrangbill,#chitietbill{
+		width: 84.25px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.col_4{
+		min-width: 30px;
+		height: 40px;
+		width: 153px;
+		border: solid 1px black;
+	}
+	.col_4 img{
+		width: 143px;
+		height: 38px;
+	}
+	h1{
+		width: 51px;
+		height: 40px;
+		font-size: 7px;
+		line-height: 40px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h2{
+		width: 184px;
+		height: 40px;
+		font-size: 7px;
+		line-height: 40px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h5{
+		width: 153px;
+		height: 40px;
+		font-size: 7px;
+		line-height: 40px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	h6{
+		width: 84.25px;
+		height: 40px;
+		font-size: 7px;
+		line-height: 40px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnang{
+		width: 51px;
+		height: 40px;
+		font-size: 5px;
+		line-height: 40px;
+		text-align: left;
+		border: solid 1px black;
+	}
+	.chucnangbill{
+		width: 84.25px;
+		height: 40px;
+		font-size: 15px;
+		line-height: 30px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	button{
+		font-size: 9px;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-color: black;
+		color: red;
+	}
+	.navbar .menu{
+		width: 562px; 
+		height: 50px
+		background-color: black;
+	}
+	.navbar .menu .menutop a{
+		float: right; 
+		width: 20%; 
+		height: 50px; 
+		font-size: 15px; 
+		line-height: 50px;
+		text-align: right;
+		text-decoration: none;
+		color: #555555;
+	}
+	.navbar .menu .menutop a:hover{
+		text-decoration: none;
+		color: cyan;
+	}
+	.btnthem{
+		width: 15px;
+		height: 15px;
+	}
+	#btnthemsp{
+		position: absolute;
+		margin-left: 20px;
+		left: 628px;
+		top: 107px;
+		cursor: pointer;
+	}
+	.chinhsua{
+		font-size: 20px;
+	}
+	.thongtinchitiethoadon{
+		margin-top: 5px; 
+		width: 100%; 
+		height: 25px; 
+		text-align: center; 
+		font-size: 15px; 
+		line-height: 25px; 
+		color: red; 
+		position: relative;
+	}
+	.thongtinkhachhang,.thongtinnhanhang,.thongtinhoadon{
+		font-size: 10px;	
+	}
+	.info,.output,.tong{
+		font-size: 8px;
+	}
+	.tongtienbill,.tinhtrangbill{
+		font-size: 9px;
+	}
+	.class select{
+		width: 60%;
+	}
+	.footer{
+		background: #000;
+		color: #8a8a8a;
+		font-size: 14px;
+		padding: 20px 0;
+	}
+	.footer p{
+		color: #8a8a8a;
+	}
+	.footer	h3{
+		color: white;
+	}
+	.app-logo img{
+		width: 50px;
+	}
+	ul{
+		list-style-type: none;
+		font-size: 10px;
+	}
+	.menu-icon{
+		width: 50px;
+		height: 50px;
+	}
+
+	.footer_col_1 h3,.footer_col_2 h3,.footer_col_3 h3,.footer_col_4 h3{
+		font-size: 13px; 
+	}
+	.logochinh{
+		width: 50px;
+		height: 50px;
+	}
+	.thongtinsanpham{
+		height: 18px;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	#baosearch{
+		display: none;
+	}
+}
+@media screen and (max-width: 679px){
+	#chua{
+		margin-left: 0px;
+	}
+	#sanpham{
+		margin-left: 0px;
+		height: 270px;
+	}
+	#phantrang,#phantrangkh{
+		width: 484px;
+	}
+	#phantrang div,#phantrangkh div{
+		width: 484px;
+		font-size: 8px;
+		width: 10px;
+		height: 10px;
+	}
+	.thongtinsanpham{
+		width: 484px; 
+		height: 50px; 
+		font-size: 30px; 
+		text-align: center
+	}
+	.thongtinidsp,.thongtinloaisp,.thongtinchucnangsp,.thongtinidkh,.thongtinchucnangkh,.thongtinquyenkh{
+		width: 50px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtinanhsp,.thongtingiasp,.thongtinhotenkh,.thongtinuserkh,.thongtinngaydat,.thongtintongtien{
+		width: 108px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtintensp,.thongtinemailkh{
+		width: 118px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	.thongtiniddh,.thongtinidcus,.thongtintinhtrangbill,.thongtinchitietbill{
+		width: 67px;
+		height: 15px;
+		float: left;
+		text-align: center;
+		font-size: 8px;
+		line-height: 15px;
+		color: white;
+		border: solid 1px black;
+		background-color: red;
+	}
+	#idsp,#loaisp,#idkh,#tinhtrangkh{
+		width: 50px;
+		height: 30px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#imgsp,#giasp,#hotenkh,#userkh,#ngaydathang,#tongtien{
+		width: 108px;
+		height: 30px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#tensp,#emailkh{
+		width: 118px;
+		height: 30px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	#idbill,#idkhachhang,#tinhtrangbill,#chitietbill{
+		width: 67px;
+		height: 30px;
+		float: left;
+		text-align: center;
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.col_4{
+		min-width: 30px;
+		height: 30px;
+		width: 108px;
+		border: solid 1px black;
+	}
+	.col_4 img{
+		width: 98px;
+		height: 28px;
+	}
+	h1{
+		width: 50px;
+		height: 30px;
+		font-size: 6px;
+		line-height: 30px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h2{
+		width: 118px;
+		height: 30px;
+		font-size: 6px;
+		line-height: 30px;
+		text-align: center;
+		border: solid 1px black; 
+	}
+	h5{
+		width: 108px;
+		height: 30px;
+		font-size: 6px;
+		line-height: 30px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	h6{
+		width: 67px;
+		height: 30px;
+		font-size: 6px;
+		line-height: 30px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	.chucnang{
+		width: 50px;
+		height: 30px;
+		font-size: 5px;
+		line-height: 30px;
+		text-align: left;
+		border: solid 1px black;
+	}
+	.chucnangbill{
+		width: 67px;
+		height: 30px;
+		font-size: 15px;
+		line-height: 15px;
+		text-align: center;
+		border: solid 1px black;
+	}
+	button{
+		font-size: 9px;
+		width: 23px;
+		height: 23px;
+		border-radius: 50%;
+		background-color: black;
+		color: red;
+	}
+	.navbar .menu{
+		width: 384px; 
+		height: 50px
+		background-color: black;
+	}
+	.navbar .menu .menutop a{
+		float: right; 
+		width: 25%; 
+		height: 50px; 
+		font-size: 13px; 
+		line-height: 50px;
+		text-align: right;
+		text-decoration: none;
+		color: #555555;
+	}
+	.navbar .menu .menutop a:hover{
+		text-decoration: none;
+		color: cyan;
+	}
+	.btnthem{
+		width: 10px;
+		height: 10px;
+	}
+	#btnthemsp{
+		position: absolute;
+		margin-left: 0px;
+		left: 474px;
+		top: 104px;
+		cursor: pointer;
+	}
+	.dulieuinput{
+		margin-top: 5px;
+		margin-left: 5%;
+		float: left;
+		width: 35%;
+		height: 30px;
+		line-height: 30px;
+		font-size: 10px;
+		text-align: right;
+	}
+	.themmoisanpham{
+		width: 100%; 
+		height: 50px; 
+		font-size: 25px; 
+		text-align: center;
+	}
+	input{
+		margin-top: 5px;
+		float: right;
+		margin-right: 5%;
+		width: 55%;
+		height: 30px;
+		border-right: 0px;
+		border-top: 0px;
+		border-left: 0px;
+		border-bottom: solid 1px lightgray;
+		outline: none;
+	}
+	select,option{
+		margin-top: 5px;
+		float: left;
+		width: 30%;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		font-size: 15px;
+	}
+	input[type=file]{
+		margin-top: 5px;
+		float: left;
+		width: 55%;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		font-size: 10px;
+		border-bottom: 0px;
+	}
+	.error1{
+		color: red;
+		font-size: 10px;
+		text-align: center;
+		display: none;
+	}
+	.chinhsua{
+		font-size: 20px;
+	}
+	.thongtinchitiethoadon{
+		margin-top: 5px; 
+		width: 100%; 
+		height: 20px; 
+		text-align: center; 
+		font-size: 10px; 
+		line-height: 20px; 
+		color: red; 
+		position: relative;
+	}
+	.thongtinkhachhang,.thongtinnhanhang,.thongtinhoadon{
+		font-size: 8px;	
+	}
+	.info,.output,.tong{
+		font-size: 6px;
+	}
+	.tongtienbill,.tinhtrangbill{
+		font-size: 8px;
+	}
+	.class select{
+		width: 60%;
+	}
+	.footer{
+		background: #000;
+		color: #8a8a8a;
+		font-size: 14px;
+		padding: 20px 0;
+	}
+	.footer p{
+		color: #8a8a8a;
+	}
+	.footer	h3{
+		color: white;
+	}
+	.app-logo img{
+		width: 50px;
+	}
+	ul{
+		list-style-type: none;
+		font-size: 8px;
+	}
+	.menu-icon{
+		width: 50px;
+		height: 50px;
+	}
+
+	.footer_col_1 h3,.footer_col_2 h3,.footer_col_3 h3,.footer_col_4 h3{
+		font-size: 12px; 
+	}
+	.logochinh{
+		width: 35px;
+		height: 35px;
+	}
+	.thongtinsanpham{
+		height: 15px;
+		font-size: 10px;
+		line-height: 15px;
+	}
+	#baosearch{
+		display: none;
+	}
+}

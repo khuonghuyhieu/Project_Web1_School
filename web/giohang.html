@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="./css/giohang.css">
+    <script src="js/giohang.js" defer></script>
+</head>
+<body >
+    <!-- menu -->
+    <div class="navbar" style="position: relative;">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/logo_d1h3.png" width="100px" height="100px"></a>
+                </div>
+
+                <nav>
+                    <ul class="menu">
+                        <li><span onClick="window.location.href='index.html'">Trang chủ</span></li>
+                        <li><span onclick="showHistory()";>Lịch sử giao dịch</span></li>
+                        <li><span onclick="showBill();">Xem hóa đơn</span></li>
+                        <li id="test2"><img src="./images/login/account.png" width="30px" height="30px" id="hinhdangnhap" onclick="dnhap();">
+                        </li>
+                    </ul>     
+                </nav>     
+            </div>  
+
+    <div id="he-ro" class="hero">
+        <div id="form" >
+            <div id="X" onclick="TatForm();">X</div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login1()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register1()">Register</button>
+            </div>
+            
+            <div id="khunglogin">
+                <form id="login" class="input-group">
+                    <div id="sign-in"><h2>Đăng nhập</h2>
+                    <hr>
+                    </div>
+                    <input id="user" type="text" class="input-field" value="" placeholder="Tên đăng nhập" value="" >
+                    <div id="erroruser" class="error">Bạn chưa nhập tên đăng nhập</div>
+                    <input id="pass" type="password" class="input-field" value="" placeholder="Mật Khẩu" >
+                     <div id="errorpass" class="error">Bạn chưa nhập mật khẩu</div>
+                    <button type="submit" class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+
+            <div id="signup">
+                <form id="register" class="input-group">
+                    <div id="sign-in"><h2>Đăng ký</h2>
+                    <hr>
+                    </div>
+                    <input type="text" class="input-field" placeholder="Tên đăng nhập" id="usr" value="">
+                    <div id="errorusr" class="error">Bạn chưa nhập tên đăng nhập</div>
+                    <input type="password" class="input-field" placeholder="Mật Khẩu" id="mk" value="">
+                    <div id="errormk" class="error">Bạn chưa nhập mật khẩu</div>
+                    <input type="password" class="input-field" placeholder="Nhập lại mật khẩu" id="mk1" value="" >
+                    <div id="errormk1" class="error">Mật khẩu không trùng khớp</div>
+                    <input type="text" class="input-field" placeholder="Họ và Tên" id="hoten" value="">
+                    <div id="errorhoten" class="error">Bạn chưa nhập họ tên</div>
+                    <input type="email" class="input-field" id="email" placeholder="Email" value="">
+                    <div id="erroremail" class="error">Bạn chưa nhập email</div>
+                    <div id="gioitinh">Giới Tính: 
+                    <input type="radio" name="ck1" value="Nam" checked="checked" id="nam">Nam
+                    <input type="radio" name="ck1" value="Nu" id="nu">Nữ
+
+                    </div>
+                   <div id="ngaysinh">Ngày Sinh: 
+                        <input type="date" name="ngsinh" value="ngaysinh" id="ns">
+                        <div id="errorngsinh" class="error">Bạn chưa chọn ngày sinh</div>
+                    </div>
+                    <div>
+                    <button type="submit" class="submit-btn" >OK</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="bgden" onclick="TatForm();"></div>
+    <div id="bill-show">
+        <div id="detail-bill"></div>
+        
+    </div>
+
+    
+    <div class="full-contain">
+        <form id="formthongtinkh">
+        <div class="contain">
+            <div class="information-left">
+                <div>
+                    <div class="check-information-meeting">
+                        <h2>1. Xác nhận thông tin và điểm hẹn</h2>
+                    </div>
+                    <div class="information-customer">
+                        <h3>Điền Thông Tin</h3>
+                        <select name="ChiNhanh" id="ChiNhanh">
+                            <option value="">Chọn chi nhánh mua xe</option>
+                            <option value="Honda H3D1 - Nơ Trang Long - 17 Nơ Trang Long, P.7 , Q.Bình Thạnh - (028) 38030781">Honda H3D1 - Nơ Trang Long
+                            17 Nơ Trang Long, P.7 , Q.Bình Thạnh
+                            (028) 38030781</option>
+                            <option value="Honda H3D1 - Bến Lức - 29 Quốc Lộ 1A, Bến Lức, Long An - (0272) 3634224">Honda H3D1 - Bến Lức
+                            29 Quốc Lộ 1A, Bến Lức, Long An
+                            (0272) 3634224</option>
+                            <option value="Honda H3D1 - Cách Mạng Tháng 8 - 736 Cách Mạng Tháng 8, P.5, Q.Tân Bình - (028) 39907920">Honda H3D1 - Cách Mạng Tháng 8
+                            736 Cách Mạng Tháng 8, P.5, Q.Tân Bình
+                            (028) 39907920</option>
+                            <option value="Honda H3D1 - Khánh Hội - 257-259 Khánh Hội, P.5 Q.4 - (028) 39414931">Honda H3D1 - Khánh Hội
+                            257-259 Khánh Hội, P.5 Q.4
+                            (028) 39414931</option>
+                            <option value="Honda H3D1 - Lê Trọng Tấn - 406A Lê Trọng Tấn, Q.Tân Phú - (028) 38165130">Honda H3D1 - Lê Trọng Tấn
+                            406A Lê Trọng Tấn, Q.Tân Phú
+                            (028) 38165130</option>
+                            <option value="Honda H3D1 - Hàng Xanh - 245 Xô Viết Nghệ Tĩnh, P.17, Q.Bình Thạnh - (028) 35106666">Honda H3D1 - Hàng Xanh
+                            245 Xô Viết Nghệ Tĩnh, P.17, Q.Bình Thạnh
+                            (028) 35106666</option>
+                            <option value="Honda H3D1 - Tân An - 138 QL62, Phường 2, Tp. Tân An, Long An - (0272) 3647111">Honda H3D1 - Tân An
+                            138 QL62, Phường 2, Tp. Tân An, Long An
+                            (0272) 3647111</option>
+                        </select>
+                        <div id="errorchinhanh" class="error">Bạn chưa chọn chi nhánh</div>
+                        <div>
+                            <input id="diachi" class="input" type="text" value="" placeholder="Nhập địa chỉ nhà bạn">
+                            <div id="errordiachi" class="error">Bạn chưa nhập địa chỉ nhà bạn</div>
+                        </div>
+                        <div>
+                            <input id="sdt" class="input-2" type="text" value="" placeholder="Số điện thoại">
+                            <div id="errorsdt" class="error">Bạn chưa nhập số điện thoại</div>
+                            <input id="nguoinhan" class="input-2" type="text" value="" placeholder="Tên Người Nhận">
+                            <div id="errorten" class="error">Bạn chưa nhập tên người nhận</div>
+                        </div>
+                        <div>
+                            <input id="ghichu" class="input" type="text" value="" placeholder="Ghi chú(nếu có)">
+                        </div>
+                        <div class="pay">
+                            <div class="pay-text">
+                                <h2>2. Hình thức thanh toán</h2>
+                            </div>
+                            <div class="pay-click">
+                                <div class="pay-left" id="payment">
+                                    <div>
+                                        <input type="radio" name="pay" value="Thanh toán khi giao hàng" id="id-express" checked>
+                                        <img src="images/pay/cash.png"> Thanh toán khi giao hàng
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="pay" value="ATM-VietTinBank" id="ATM">
+                                        <img src="images/pay/atm.png">  Thẻ ATM-VietTinBank
+
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="pay" value="ZaloPay" id="zalo">
+                                        <img src="images/pay/zalo.png"> ZaloPay
+
+                                    </div>
+                                </div>
+                                <div class="pay-right">
+                                    <div>
+                                        <input type="radio" name="pay" value="Visa/Master/JCB" id="visa">
+                                        <img src="images/pay/visa.png"> Visa/Master/JCB
+
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="pay" value="MoMo" id="momo">
+                                        <img src="images/pay/momo.png"> MoMo
+
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="pay" value="AriPay" id="aripay">
+                                        <img src="images/pay/airpay.png">   AirPay
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-right">
+                <div class="cart-text">
+                    <h2>Hóa Đơn Thanh Toán</h2>
+                    <div id="xoatatcacart" onclick="xoatatcacart();" >Xóa giỏ hàng</div>
+                </div>
+                <div id="cart-item">
+                    <!-- <div class="item">Chưa có sản phẩm nào</div> -->
+                </div>
+                <div id="sum-money">
+                    <div id="total-money">Tổng tiền thanh toán:
+                        <h3 id="money"></h3>
+                    </div>
+                    <button type="submit" onclick="Order(); return false;" >Đặt hàng</button>
+                </div>
+            </div>
+
+        </div>
+        </form>
+    </div>
+    <div id="product-info">
+        <div id="info-detail"></div>
+    </div>
+    <div id="history-cart">
+        <div id="history-detail"></div>
+    </div>
+<!-- </div> -->
+</body>
+</html>
